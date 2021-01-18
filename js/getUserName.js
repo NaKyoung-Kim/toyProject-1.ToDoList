@@ -1,5 +1,5 @@
-const form = document.querySelector(".js-form"),
-  input = form.querySelector("input"),
+const getNameForm = document.querySelector(".js-getNameForm"),
+  input = getNameForm.querySelector("input"),
   greetingText = document.querySelector(".js-greetingText");
 
 const USER_LS = "currentUserName",
@@ -14,7 +14,7 @@ function saveName(content){
 // 사용자로부터 이름을 입력받았을 경우에 실행되는 함수 showName().
 // 폼 태그를 숨기고, 환영문구를 다시 띄운다.
 function showName(text){
-  form.classList.remove(SHOW_CN);
+  getNameForm.classList.remove(SHOW_CN);
   greetingText.classList.add(SHOW_CN);
   greetingText.innerText = `Welcome, ${text}!`;
 }
@@ -29,8 +29,8 @@ function submitHandler(event){
 // 이름을 입력받지 않았을 때 실행되는 함수 getName().
 // 폼 태그를 띄워 입력받고, submit이 발생하면 submitHandler를 호출한다.
 function getName(){
-  form.classList.add(SHOW_CN);
-  form.addEventListener("submit", submitHandler);
+  getNameForm.classList.add(SHOW_CN);
+  getNameForm.addEventListener("submit", submitHandler);
 }
 
 
