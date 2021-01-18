@@ -1,0 +1,123 @@
+#1-0 자바스크립트
+  웹에서 사용하는 유일한 프로그래밍 언어
+  프론트엔드를 개발하는 모두가 자바스크립트를 이용해 소통이 원활
+  하지만 대안이 없다는 것은 큰 단점임
+
+#1-1
+  자바스크립트로 할 수 있는 것?
+  웹은 물론, 리얼타임 앱, 비디오게임, 백엔드까지 구축 가능함
+
+#1-2 자바스크립트 버전
+  자바스크립트는 일종의 specification(안내책자같은 느낌이랄까..?)이라고 할 수 있음.
+  각각의 브라우저는 이 specification을 받아 각자의 방식으로 구현하는 것.
+  똑같은 결과를 내려고 노력하지만 안되는 경우가 종종 있음.
+  Vanila js : 라이브러리가 없는 날것의 자바스크립트
+
+#1-3
+  바닐라js는 브라우저를 통해 제공되는 자바스크립트
+  특정 framework, Library를 배우기 전에 바닐라 자바스크립트에 대해서 정확히 알아두는 것이 멀리 봤을 때 훨씬 도움이 됨.
+  +) 타 프레임워크나 라이브러리를 사용하는 것보다 바닐라 js를 사용할 때 속도가 훨씬 빠름
+
+#1-4
+  자바스크립트 파일은 바디 하단에서 불러오자.
+
+#1-6 변수 Variable
+  변경되거나, 변경될 수 있는 것
+  create -> initialize -> use. 상황에 따라 생성과 초기화를 한번에 하기도 함.
+  let a = 5;
+  var b=5;
+
+#1-7 let, const, var
+  let 변수
+  const 상수 : 값 변경 불가능. 새로운 값을 대입하려고 하면 에러발생.
+  var : let과 같은 의미로 사용 가능. 그래도 쓰자면 let을 사용하자.
+
+#1-8 데이터 타입
+  주석처리( // 1줄주석,  /* 여러 줄 주석 */)
+  String(텍스트)
+  Boolean
+  Number
+  float : 소수점이 있는 숫자
+
+#1-9 데이터 타입을 정렬하는 방법- Array
+  const wow = ["wow1","wow2","wow3"];
+  * 변수명은 camelCase로 작성한다.
+
+#1-10 데이터 타입을 정렬하는 방법- Object
+  const myInfo = {
+    name : "neungE",
+    age : "23",
+    gender : "Female",
+    isWonderful : true,
+    favThings : ["duck", "fruits", "baby bear"]
+  };
+  console.log(myInfo.isWonderful);
+
+#2-0 함수 입문하기
+  console.log() : console이라는 객체 안에 있는 log라는 함수를 실행해라!
+    -> console.log(console); 실행해보면 콘솔 객체에 대해 알 수 있음.
+  myInfo.favThings와 비슷한 형태라는 점을 느껴보자
+  
+  함수? 어떤 기능을 하도록 만들어 놓은 코드 조각.
+  인자(argument): 함수에세 외부에 있는 데이터를 주는 역할을 함
+
+  function greeting(name){
+    console.log("Hello "+name+"!");
+  }                                 //함수 생성
+  gretting("nico");                 //함수 실행
+
+#2-1 
+  comma 쓰기 싫으면 +를 썼음.
+  `(백틱)을 사용하면 아주아주아주아주 달라짐.
+  function greeting(name, favThing){
+    console.log(`Hello ${name}! Do you like ${favThing}?`);
+    return
+  }
+      //2-0의 console문과 달리 자연스럽게 쓰면 됨(스페이스 신경 x)
+  const Wow = greeting("nico", "kimchi");
+      //Wow는 함수 greeting이 반환한 값(return값)을 저장함.
+      //return값이 지정되지 않으면 오류(undefined) 발생
+  **** calculator() 함수 만들어보기
+  
+#2-2 JS DOM 함수
+  html의 모든 요소들을 객체로 만들어 가져옴!
+  배울 모든 함수들은 DOM 형태로 변경 가능함.
+  페이지에서 자바스크립트로 선택한 것은 객체가 됨.
+
+#2-3 JS를 이용해서 DOM 변경하기
+  console.dir(A);
+    : A를 이용해서 할 수 있는 모든 것을 조회하기
+  title.style.color = "red"; 로 title의 스타일을 설정, 수정할 수 있음.
+  const title = document.getElementById("aa")
+  const title = document.querySelector("#aa")
+  둘이 같은 의미! 쿼리 셀렉터의 인자로 (".aa")를 주면 class로도 선택 가능
+  그래서 쿼리 셀렉터를 사용하는 것이 훨씬 효율적이다.
+
+#2-4 이벤트와 이벤트 핸들러
+  이벤트: 웹사이트에서 일어나는 일. 클릭/오픈/프린트 등등
+  function printResize(){
+    console.log("I have been resized");
+  }
+  window.addEventListner("resize", printResize());      // printResize()가 상황과 상관 없이 바로 호출됨
+  window.addEventListner("resize", printResize);        // printResize()가 resize 이벤트가 발생할 때 호출됨
+
+#2-5 조건문(if / else if / else)
+  prompt() : 요새 잘 안쓰는! 구닥다리 js다
+  요새는 html 폼으로! 예쁘게 만들어서 쓴다
+
+#2-6 DOM과 이벤트 활용하기
+  궁금한 js 이벤트가 있으면 무조건 MDN을 찾아보자
+  offline / online 이벤트리스너 추가하기
+
+#2-7 
+  html/css/js 의 역할을 분명하게 분리할 것.
+  웹의 구조는 html이, 스타일은 css가, 로직은 js가 처리할 수 있도록.
+
+  className으로 요소의 클래스를 조정하기에는 무리가 있음!
+  이미 적용되어 있는 클래스들은 없어져버리는 문제가 생김.
+  (특정 클래스를 추가/제거하는 것이 아니라 아예 클래스를 초기화, 재정의하므로 전의 상태가 사라짐)
+  이를 피하기 위해서는 classList를 사용하는 것이 좋다.
+  (또한 클래스 이름을 조건식으로 내걸 때는 
+    [요소의 클래스 이름 ==="A"] 보다는 [요소.contains(클래스이름)] 이 적절함)
+  --> 사실 .classList.toggle(A)가 정확히 같은 역할을 해 줌.
+  (MDN 참고) - classList.add()/classList.remove() 등으로 사용할 수 있음.
