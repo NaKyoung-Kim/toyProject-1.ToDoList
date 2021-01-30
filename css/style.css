@@ -1,3 +1,24 @@
+body * {
+	color: white;
+	text-align: center;
+}
+
+ul li {
+	list-style: none;
+}
+
+.js-clock h1 {
+	margin: 5vmax auto;
+	font-size: 12vmax;
+	text-shadow: 2px 0 grey, 0 2px grey;
+}
+
+.toDoForm,
+ul.js-toDoList {
+	width: 30vw;
+	margin: 0 auto;
+}
+
 .getNameForm,
 .greetingText {
 	display: none;
