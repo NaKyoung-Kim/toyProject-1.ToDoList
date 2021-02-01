@@ -1,6 +1,6 @@
 const body = document.querySelector("body");
 
-const BG_IMG_NO = 5;
+const BG_IMG_NO = 6;
 
 function showBG(bgNum){
   const image = document.createElement("img");
