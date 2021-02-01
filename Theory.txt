@@ -230,7 +230,3 @@
 
   fetch()
   .then()
-
-  .innerHTML 과 .innerText의 차이는?
-
-#3-10
