@@ -1,6 +1,28 @@
+@font-face {
+	font-family: "NanumSquareRound";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 body * {
+	font-family: "NanumSquareRound";
 	color: white;
 	text-align: center;
+}
+
+.getNameForm,
+.greetingText {
+	display: none;
+
+	position: absolute;
+	left: 40%;
+	top: 0;
+	font-size: 2rem;
+}
+.show {
+	display: block;
 }
 
 .weather {
@@ -15,14 +37,6 @@ body * {
 	margin-bottom: 5vmax;
 	font-size: 10vmax;
 	text-shadow: 2px 0 grey, 0 2px grey;
-}
-
-.getNameForm,
-.greetingText {
-	display: none;
-}
-.show {
-	display: block;
 }
 
 .toDoForm,
