@@ -12,16 +12,15 @@ body * {
 	text-align: center;
 }
 
-input * {
+input {
 	color: black;
 }
 
 .getNameForm,
 .greetingText {
 	display: none;
-
 	position: absolute;
-	left: 40%;
+	left: 45%;
 	top: 0;
 	font-size: 2rem;
 }
