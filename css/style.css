@@ -12,7 +12,8 @@ body * {
 	text-align: center;
 }
 
-input {
+input,
+button {
 	color: black;
 }
 
@@ -20,9 +21,10 @@ input {
 .greetingText {
 	display: none;
 	position: absolute;
-	left: 45%;
 	top: 0;
-	font-size: 2rem;
+	font-size: 3rem;
+	width: 100vw;
+	margin: 0 auto;
 }
 .show {
 	display: block;
@@ -67,4 +69,19 @@ ul li {
 	left: 0;
 	z-index: -1;
 	animation: fadeIn 0.5s linear;
+}
+
+.logOutBtn {
+	outline: none;
+	border: none;
+	background-color: white;
+	box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+	color: black;
+	font-weight: bold;
+	border-radius: 1rem;
+	line-height: 180%;
+	width: 5rem;
+	position: absolute;
+	left: 45%;
+	top: 4rem;
 }

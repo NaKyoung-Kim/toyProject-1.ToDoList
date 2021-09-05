@@ -17,6 +17,17 @@ function showName(text){
   getNameForm.classList.remove(SHOW_CN);
   greetingText.classList.add(SHOW_CN);
   greetingText.innerText = `Welcome, ${text}!`;
+  const logOut = document.createElement('button');
+  logOut.classList.add('logOutBtn');
+  logOut.innerText = 'LogOut';
+  greetingText.append(logOut);
+  logOut.addEventListener('click', function() {
+    const logInfo = confirm('저장되어 있는 모든 데이터가 삭제됩니다. 계속하시겠습니까?');
+    if (logInfo) {
+      localStorage.clear();
+      location.reload();
+    }
+  })
 }
 
 // getName()에서 호출된 후 입력받은 값을 이용해 이름을 띄워주는 함수 submitHandler().
